@@ -4,6 +4,7 @@ backend:
   name: github
   repo: emmajuettner/bonnie-juettner-portfolio-site
   branch: master # Branch to update (optional; defaults to master)
+  site_domain: unruffled-poincare-07f7ab.netlify.com
 publish_mode: editorial_workflow
 media_folder: 'assets/uploads'
 collections:
