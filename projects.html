@@ -77,5 +77,18 @@
 	<footer>
 © 2020 Emma Juettner. Built with <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://pages.github.com/">Github Pages</a>.
 </footer>
+	
+  <!-- netlify identity script -->
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+  </script>
   </body>
 </html>

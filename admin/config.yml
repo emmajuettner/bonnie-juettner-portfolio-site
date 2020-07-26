@@ -1,23 +1,12 @@
 # config.yml
 
 backend:
-    name: github
-    repo: emmajuettner/bonnie-juettner-portfolio-site
-    branch: master # Branch to update (optional; defaults to master)
-    site_domain: unruffled-poincare-07f7ab.netlify.com
-publish_mode: editorial_workflow
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
 media_folder: 'assets/uploads'
 collections:
-    - name: 'blog' #used in paths
-    label: 'Blog' #used in UI
-    folder: '_posts/' #folder where docs are stored
-    create: true #allows creating new docs
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' #YYYY-MM-DD-title.md
-    editor:
-        preview: false
+  - name: 'blog'
+    label: 'Blog'
+    folder: '_posts/'
     fields:
-        - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
-        - { label: 'Title', name: 'title', widget: 'string' }
-        - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-        - { label: 'Featured Image', name: 'thumbnail', widget: 'image'}
-        - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { name: Title }
