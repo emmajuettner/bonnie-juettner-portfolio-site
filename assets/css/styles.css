@@ -1,45 +1,59 @@
 /* Body Styles */
+/*
+dark bg - 1D2842 - link text
+medium bg - EBB71A - accent/borders
+light bg - 0494E1 - link highlights
+dark main - 242E4E - visited links
+medium main - 32417A - unvisited links
+light main - 90AAFF - link highlights
+basic bg - E5EADD - body bg
+bg shadow - BFB1A7 - body bg shadow
+white - FCF9EB - main bg
+black - 000000 - main text
+*/
 @import url(monokai.css);
-body { font-family: sans-serif; background-color: #FEF2D8; line-height: 1.4em; padding-left: 5%; padding-right: 5%; padding-top: 1em; font-size: 16px; }
+body { font-family: sans-serif; background-color: white; line-height: 1.4em; width: 99%; padding-top: 1em; font-size: 16px; }
 
 h2 { line-height: 1.2em; }
 
 a { padding: 1px 1px 0; text-decoration: none; }
 
-a:link { color: #B0131D; }
+a:link { color: #0C2B91; }
 
-a:visited { color: #B0131D; }
+a:visited { color: #0C2B91; }
 
-a:focus { border-bottom: 2px solid #B0131D; background-color: #FFD3CD; }
+a:focus { border-bottom: 2px solid #0C2B91; background-color: #C8F5FF; }
 
-a:hover { border-bottom: 2px solid #B0131D; background-color: #FFD3CD; }
+a:hover { border-bottom: 2px solid #0C2B91; background-color: #C8F5FF; }
 
 .active { border-bottom: 2px solid; }
 
 /* Navbar Styles */
-nav { padding-bottom: 1em; font-size: 1.1em; }
+nav { padding-bottom: 1em; font-size: 1.1em; background-color: white; padding-left: 5%; padding-right: 5%; }
 
 nav a { margin-right: 0.5em; }
+
+.logo { font-size: 1.4em; margin-right: 1em; }
 
 /* Footer Styles */
 footer { text-align: center; padding-top: 2em; }
 
 /* Main Block Styles */
-main { background-color: white; border: 3px solid #F0535D; border-radius: 2px; box-shadow: 7px 7px #E0D0C0; max-width: 45em; margin: 2em auto 2em auto; padding: 0em 2em 2em 2em; overflow: auto; /*to accomodate floating divs*/ }
+main { background-color: white; border: 3px solid #1EC2EB; border-radius: 2px; box-shadow: 7px 7px #E0D0C0; max-width: 45em; margin: 2em auto 2em auto; padding: 0em 2em 2em 2em; overflow: auto; /*to accomodate floating divs*/ }
 
-main hr { border: 2px solid #F0535D; }
+main hr { border: 2px solid #5D879E; }
 
 main h1 { text-align: center; }
 
 main a { padding: 1px 1px 0; text-decoration: none; }
 
-main a:link { color: #0060CC; border-bottom: 2px solid; }
+main a:link { color: #0C2B91; border-bottom: 2px solid; }
 
-main a:visited { color: #064A8C; }
+main a:visited { color: #0C2B91; }
 
-main a:focus { border-bottom: 2px solid #064A8C; background-color: #99E9FF; color: #064A8C; }
+main a:focus { border-bottom: 2px solid #0C2B91; background-color: #C8F5FF; color: #0C2B91; }
 
-main a:hover { border-bottom: 2px solid #064A8C; background-color: #99E9FF; color: #064A8C; }
+main a:hover { border-bottom: 2px solid #0C2B91; background-color: #C8F5FF; color: #0C2B91; }
 
 /* About Styles */
 .about-img { float: left; width: 30%; padding-top: 1em; }
