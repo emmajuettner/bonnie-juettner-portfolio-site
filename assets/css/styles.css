@@ -1,45 +1,37 @@
-/* Body Styles */
-/*
-dark bg - 1D2842 - link text
-medium bg - EBB71A - accent/borders
-light bg - 0494E1 - link highlights
-dark main - 242E4E - visited links
-medium main - 32417A - unvisited links
-light main - 90AAFF - link highlights
-basic bg - E5EADD - body bg
-bg shadow - BFB1A7 - body bg shadow
-white - FCF9EB - main bg
-black - 000000 - main text
-*/
+/* Style Variables */
 @import url(monokai.css);
-body { font-family: sans-serif; background-color: #E9F9FF; line-height: 1.4em; width: auto; margin: 0px; }
+:root { --white: #fefdf3; --black: #171615; --dark-blue: #082a4c; --med-blue: #0887E0; /*#09519b;*/ --light-blue: #14a0cc; --bright-red: #eb3610; }
+
+/* nav bar diff color or top/bottom border, header on normal bg line dividers between items one main bright accent color for highlights understated sans-serif fonts */
+/* Base Styles */
+body { font-family: sans-serif; background-color: var(--white); color: var(--black); line-height: 1.4em; width: auto; margin: 0; }
 
 h2 { line-height: 1.2em; }
 
 a { padding: 1px 1px 0; text-decoration: none; }
 
-a:link { color: #19253C; }
+a:link { color: var(--black); }
 
-a:visited { color: #19253C; }
+a:visited { color: var(--black); }
 
-a:focus { border-bottom: 2px solid #19253C; background-color: #C8F5FF; }
+a:focus { border: 2px solid var(--med-blue); }
 
-a:hover { border-bottom: 2px solid #19253C; background-color: #C8F5FF; }
+a:hover { border: 2px solid var(--med-blue); }
 
-.active { border-bottom: 2px solid; }
+.active { border-bottom: 3px solid var(--med-blue); }
+
+/* Header Styles */
+header { font-size: 2.5em; padding-top: 0.5em; padding-bottom: 0.5em; padding-left: 5%; padding-right: 5%; }
+
+header a { font-weight: bold; }
 
 /* Navbar Styles */
-nav { padding-bottom: 1em; font-size: 1.1em; background-color: white; padding-left: 20%; padding-right: 20%; padding-top: 1em; width: auto; }
+nav { font-size: 1.1em; padding-left: 5%; padding-right: 5%; padding-top: 0.5em; padding-bottom: 0.5em; width: auto; border-top: 2px solid var(--black); border-bottom: 2px solid var(--black); }
 
 nav a { margin-right: 0.5em; }
 
-.logo { font-size: 1.1em; margin-right: 3em; }
-
-/* Footer Styles */
-footer { text-align: center; padding-top: 2em; }
-
 /* Main Block Styles */
-main { background-color: white; border-radius: 5px; max-width: 45em; margin: 2em auto 2em auto; padding: 0em 2em 2em 2em; overflow: auto; /*to accomodate floating divs*/ }
+main { max-width: 90%; margin: 5%; padding: 1em 2em 2em 2em; overflow: auto; /*to accomodate floating divs*/ background-color: var(--white); border-radius: 3px; border: 0px solid var(--med-blue); }
 
 main hr { border: 2px solid #5D879E; }
 
@@ -47,31 +39,16 @@ main h1 { text-align: center; }
 
 main a { padding: 1px 1px 0; text-decoration: none; }
 
-main a:link { color: #0C2B91; border-bottom: 2px solid; }
+main a:link { color: var(--med-blue); border-bottom: 2px solid; }
 
-main a:visited { color: #0C2B91; }
+main a:visited { color: var(--med-blue); }
 
-main a:focus { border-bottom: 2px solid #0C2B91; background-color: #C8F5FF; color: #0C2B91; }
+main a:focus { border-bottom: 2px solid var(--med-blue); color: var(--med-blue); }
 
-main a:hover { border-bottom: 2px solid #0C2B91; background-color: #C8F5FF; color: #0C2B91; }
+main a:hover { border-bottom: 2px solid var(--med-blue); color: var(--med-blue); }
 
-/* About Styles */
-.about-img { float: left; width: 30%; padding-top: 1em; }
-
-.about-text { float: left; width: 65%; margin-left: 5%; }
-
-/* Project Styles */
-.devicon-span { float: right; }
-
-.project { padding-left: 3em; padding-bottom: 1em; }
-
-/* Code Highlighting */
-.highlight pre { overflow: auto; font-size: 14px; }
-
-.code-inline { font-family: monospace; color: #B0131D; font-size: 14px; }
-
-/* Mobile Styles */
-@media only screen and (max-width: 600px) { .about-img { width: 50%; float: none; display: block; margin: auto; padding-top: 0; } .about-text { width: 100%; float: none; margin: auto; } }
+/* Footer Styles */
+footer { border-top: 2px solid var(--black); text-align: center; font-size: 0.7em; padding-top: 2em; }
 
 /*pygments syntax highlighting*/
 
