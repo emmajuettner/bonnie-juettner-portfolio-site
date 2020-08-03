@@ -4,6 +4,8 @@
 
 /* nav bar diff color or top/bottom border, header on normal bg line dividers between items one main bright accent color for highlights understated sans-serif fonts */
 /* Base Styles */
+* { box-sizing: border-box; }
+
 body { font-family: sans-serif; background-color: var(--white); color: var(--black); line-height: 1.4em; width: auto; margin: 0; }
 
 h2 { line-height: 1.2em; }
@@ -21,17 +23,15 @@ a:hover { border: 2px solid var(--med-blue); }
 .active { border-bottom: 3px solid var(--med-blue); }
 
 /* Header Styles */
-header { font-size: 2.5em; padding-top: 0.5em; padding-bottom: 0.5em; padding-left: 5%; padding-right: 5%; }
-
-header a { font-weight: bold; }
+header { font-size: 2.5em; padding-top: 0.5em; padding-bottom: 0.5em; padding-left: 5%; padding-right: 5%; font-weight: bold; }
 
 /* Navbar Styles */
-nav { font-size: 1.1em; padding-left: 5%; padding-right: 5%; padding-top: 0.5em; padding-bottom: 0.5em; width: auto; border-top: 2px solid var(--black); border-bottom: 2px solid var(--black); }
+nav { font-size: 1.1em; padding-left: 5%; padding-right: 5%; padding-top: 0.5em; padding-bottom: 0.5em; width: auto; }
 
 nav a { margin-right: 0.5em; }
 
 /* Main Block Styles */
-main { max-width: 90%; margin: 5%; padding: 1em 2em 2em 2em; overflow: auto; /*to accomodate floating divs*/ background-color: var(--white); border-radius: 3px; border: 0px solid var(--med-blue); }
+main { max-width: 90%; margin: 5%; padding: 0em 2em 2em 2em; background-color: var(--white); border-radius: 3px; border: 0px solid var(--med-blue); }
 
 main hr { border: 2px solid #5D879E; }
 
@@ -47,8 +47,32 @@ main a:focus { border-bottom: 2px solid var(--med-blue); color: var(--med-blue);
 
 main a:hover { border-bottom: 2px solid var(--med-blue); color: var(--med-blue); }
 
+/* Featured Content Styles */
+.featured-content { display: flex; flex-wrap: wrap; }
+
+.featured-item { width: 50%; padding-left: 1em; padding-right: 1em; margin: auto; }
+
+.featured-item h2 { text-align: center; }
+
+@media only screen and (max-width: 800px) { .featured-item { width: 100%; padding: 0; } }
+
+/* Book Gallery Styles */
+.book-gallery { padding-top: 1em; }
+
+.flex-container { display: flex; flex-wrap: wrap; }
+
+.book-gallery h2 { text-align: center; }
+
+.book-item { max-width: 20%; padding-left: 1em; padding-right: 1em; padding-bottom: 1em; margin: auto; }
+
+.book-item img { max-width: 100%; height: auto; }
+
+@media only screen and (max-width: 800px) { .book-item { max-width: 33%; } }
+
+@media only screen and (max-width: 600px) { .book-item { max-width: 50%; } }
+
 /* Footer Styles */
-footer { border-top: 2px solid var(--black); text-align: center; font-size: 0.7em; padding-top: 2em; }
+footer { text-align: center; font-size: 0.7em; padding-top: 2em; padding-left: 5%; padding-right: 5%; }
 
 /*pygments syntax highlighting*/
 
